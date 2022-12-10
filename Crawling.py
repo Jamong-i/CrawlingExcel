@@ -4,7 +4,7 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtCore import Qt, QThread
-from CrawlingUi import Ui_MainWindow
+from CrawlingUi import Ui_DomecallCrawling
 from chrome_autoinstall import chromedriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -28,7 +28,7 @@ load_ws = load_wb['Sheet1']
 # chrome_autoinstaller
 driver = chromedriver()
 
-class Example(QMainWindow, Ui_MainWindow):
+class Example(QMainWindow, Ui_DomecallCrawling):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -36,7 +36,6 @@ class Example(QMainWindow, Ui_MainWindow):
         self.setWindowFlags(Qt.WindowStaysOnTopHint)
         self.show()
 
-    def Crawling():
 
     # start 쓰레드 1
     class start_clock(QThread):
@@ -70,7 +69,7 @@ class Example(QMainWindow, Ui_MainWindow):
                             bacode_XPATH = driver.find_element(By.XPATH, "/ html / body / div[2] / div[2] / div / div[1] / div[2] / form / div / div[2] / ul / li[2] / div")
                             bacode = bacode_XPATH.text
                             data_bacode.append(bacode)
-                            textBrowser.append(f'{i+1}번 상품번호:{data[i]}, 바코드번호:{bacode}')
+                            textBrowser1.append(f'{i+1}번 상품번호:{data[i]}, 바코드번호:{bacode}')
                     except Exception as error:
                         print(error, data[i])
                         data_bacode.append("구매 불가")
@@ -82,9 +81,9 @@ class Example(QMainWindow, Ui_MainWindow):
                         load_ws[f"B{j+2}"] = data_bacode[j]
 
                     load_wb.save(filename="data_bacode.xlsx")
-                    textBrowser.append("엑셀 저장 완료")
+                    textBrowser1.append("엑셀 저장 완료")
                     end = time.time()
-                    textBrowser.append(f"{end - start:.5f} sec")
+                    textBrowser1.append(f"{end - start:.5f} sec")
                     break
 
             except Exception as error:
@@ -96,12 +95,12 @@ class Example(QMainWindow, Ui_MainWindow):
             # Ui 값 가져올 변수 생성
             global start_text
             global end_text
-            global textBrowser
+            global textBrowser1
 
             # Ui 값 가져오기
             start_text = self.lineEdit_groupcode.text()
             end_text = self.lineEdit_datecode.text()
-            textBrowser = self.textBrowser
+            textBrowser1 = self.textBrowser_1
 
             # Excel 데이터 처리하기
             # String A없애주기

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>DomecallCrawling</class>
+ <widget class="QMainWindow" name="DomecallCrawling">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>383</width>
-    <height>436</height>
+    <height>527</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -29,12 +29,43 @@
       <x>10</x>
       <y>10</y>
       <width>361</width>
-      <height>382</height>
+      <height>472</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="sub_layout">
      <item>
-      <widget class="QTextBrowser" name="textBrowser"/>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="1" column="0">
+        <widget class="QTextBrowser" name="textBrowser_3"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QTextBrowser" name="textBrowser_4"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QTextBrowser" name="textBrowser_7"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QTextBrowser" name="textBrowser_5"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QTextBrowser" name="textBrowser_2"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QTextBrowser" name="textBrowser_6"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QTextBrowser" name="textBrowser_1"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QTextBrowser" name="textBrowser_8"/>
+       </item>
+       <item row="4" column="1">
+        <widget class="QTextBrowser" name="textBrowser_10"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QTextBrowser" name="textBrowser_9"/>
+       </item>
+      </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="select_layout">
@@ -148,7 +179,7 @@
   <connection>
    <sender>MacroStart_bt</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>DomecallCrawling</receiver>
    <slot>start()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -164,7 +195,7 @@
   <connection>
    <sender>MacroSop_bt</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>DomecallCrawling</receiver>
    <slot>stop()</slot>
    <hints>
     <hint type="sourcelabel">
