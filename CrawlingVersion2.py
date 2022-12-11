@@ -108,12 +108,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
                         print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF1
                     TreadTF1 = True
                     break
@@ -173,12 +175,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 2번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF2
                     TreadTF2 = True
                     break
@@ -238,12 +242,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 3번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF3
                     TreadTF3 = True
                     break
@@ -303,12 +309,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 4번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF4
                     TreadTF4 = True
                     break
@@ -368,12 +376,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 5번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF5
                     TreadTF5 = True
                     break
@@ -433,12 +443,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 6번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF6
                     TreadTF6 = True
                     break
@@ -498,12 +510,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 7번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF7
                     TreadTF7 = True
                     break
@@ -563,12 +577,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 8번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF8
                     TreadTF8 = True
                     break
@@ -628,12 +644,14 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 9번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     global TreadTF9
                     TreadTF9 = True
                     break
@@ -693,56 +711,63 @@ class Example(QMainWindow, Ui_DomecallCrawling):
 
                             textBrowser.append(
                                 f'{i + 1}번 상품번호:{itemCodeTread[number][i]}, 바코드번호:{itemBacode[number][i]}, 큰박스:{bigBox[number][i]}, 작은박스:{smallBox[number][i]}')
+
                     except:
-                        print(f"스레드 1번 {itemCodeTread[number][i]} 구매불가 상품")
+                        print(f"스레드 10번 {itemCodeTread[number][i]} 구매불가 상품")
                         itemBacode[number].append("구매 불가")
                         smallBox[number].append("구매 불가")
                         bigBox[number].append("구매 불가")
                         treadN = i + 1
+                        continue
                     break
 
                 while True:
-                    if True == TreadTF1 == TreadTF2 == TreadTF3 == TreadTF4 == TreadTF5 == TreadTF6 == TreadTF7 == TreadTF8 == TreadTF9:
-                        end_time = time.time()
-                        totalitemCode = itemCodeTread[0] + itemCodeTread[1] + itemCodeTread[2] + itemCodeTread[3] + \
-                                        itemCodeTread[4] \
-                                        + itemCodeTread[5] + itemCodeTread[6] + itemCodeTread[7] + itemCodeTread[8] + \
-                                        itemCodeTread[9]
-                        totalBacode = itemBacode[0] + itemBacode[1] + itemBacode[2] + itemBacode[3] + itemBacode[4] + \
-                                      itemBacode[5] \
-                                      + itemBacode[6] + itemBacode[7] + itemBacode[8] + itemBacode[9]
-                        totalSmallBox = smallBox[0] + smallBox[1] + smallBox[2] + smallBox[3] + smallBox[4] + smallBox[
-                            5] + \
-                                        smallBox[6] \
-                                        + smallBox[7] + smallBox[8] + smallBox[9]
-                        totalbigBox = bigBox[0] + bigBox[1] + bigBox[2] + bigBox[3] + bigBox[4] + bigBox[5] + bigBox[
-                            6] + \
-                                      bigBox[7] \
-                                      + bigBox[8] + bigBox[9]
+                    try:
+                        if True == TreadTF1 == TreadTF2 == TreadTF3 == TreadTF4 == TreadTF5 == TreadTF6 == TreadTF7 == TreadTF8 == TreadTF9:
+                            end_time = time.time()
+                            totalitemCode = itemCodeTread[0] + itemCodeTread[1] + itemCodeTread[2] + itemCodeTread[3] + \
+                                            itemCodeTread[4] \
+                                            + itemCodeTread[5] + itemCodeTread[6] + itemCodeTread[7] + itemCodeTread[8] + \
+                                            itemCodeTread[9]
+                            totalBacode = itemBacode[0] + itemBacode[1] + itemBacode[2] + itemBacode[3] + itemBacode[4] + \
+                                          itemBacode[5] \
+                                          + itemBacode[6] + itemBacode[7] + itemBacode[8] + itemBacode[9]
+                            totalSmallBox = smallBox[0] + smallBox[1] + smallBox[2] + smallBox[3] + smallBox[4] + smallBox[
+                                5] + \
+                                            smallBox[6] \
+                                            + smallBox[7] + smallBox[8] + smallBox[9]
+                            totalbigBox = bigBox[0] + bigBox[1] + bigBox[2] + bigBox[3] + bigBox[4] + bigBox[5] + bigBox[
+                                6] + \
+                                          bigBox[7] \
+                                          + bigBox[8] + bigBox[9]
 
-                        for j in range(len(totalitemCode)):
-                            load_ws[f"B{j + 2}"] = totalitemCode[j]
-                        for j in range(len(totalBacode)):
-                            load_ws[f"C{j + 2}"] = totalBacode[j]
-                        for j in range(len(totalSmallBox)):
-                            load_ws[f"D{j + 2}"] = totalSmallBox[j]
-                        for j in range(len(totalbigBox)):
-                            load_ws[f"E{j + 2}"] = totalbigBox[j]
+                            for j in range(len(totalitemCode)):
+                                load_ws[f"B{j + 2}"] = totalitemCode[j]
+                            for j in range(len(totalBacode)):
+                                load_ws[f"C{j + 2}"] = totalBacode[j]
+                            for j in range(len(totalSmallBox)):
+                                load_ws[f"D{j + 2}"] = totalSmallBox[j]
+                            for j in range(len(totalbigBox)):
+                                load_ws[f"E{j + 2}"] = totalbigBox[j]
 
-                        load_wb.save(filename="data_bacode.xlsx")
-                        textBrowser1.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser2.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser3.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser4.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser5.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser6.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser7.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser8.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser9.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        textBrowser10.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
-                        break
+                            load_wb.save(filename="data_bacode.xlsx")
+                            textBrowser1.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser2.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser3.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser4.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser5.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser6.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser7.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser8.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser9.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            textBrowser10.append(f"엑셀 저장 완료 {end_time - start_time:.5f} sec")
+                            break
+                    except:
+                        print("준비 안됨")
+                    continue
             except Exception as error:
                 print(error)
+
 
     # start 쓰레드 1(예매페이지 접속)
     class stop(QThread):
