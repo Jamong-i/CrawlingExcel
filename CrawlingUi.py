@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\CrawlingUi.ui'
+# Form implementation generated from reading ui file 'CrawlingUi.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -14,13 +14,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_DomecallCrawling(object):
     def setupUi(self, DomecallCrawling):
         DomecallCrawling.setObjectName("DomecallCrawling")
-        DomecallCrawling.resize(383, 527)
+        DomecallCrawling.resize(586, 598)
         DomecallCrawling.setMinimumSize(QtCore.QSize(383, 436))
         self.centralwidget = QtWidgets.QWidget(DomecallCrawling)
         self.centralwidget.setEnabled(True)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayoutWidget_3 = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget_3.setGeometry(QtCore.QRect(10, 10, 361, 472))
+        self.verticalLayoutWidget_3.setGeometry(QtCore.QRect(10, 10, 561, 524))
         self.verticalLayoutWidget_3.setObjectName("verticalLayoutWidget_3")
         self.sub_layout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_3)
         self.sub_layout.setContentsMargins(0, 0, 0, 0)
@@ -103,7 +103,7 @@ class Ui_DomecallCrawling(object):
         self.sub_layout.addLayout(self.star_stop_layout)
         DomecallCrawling.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(DomecallCrawling)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 383, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 586, 24))
         self.menubar.setObjectName("menubar")
         DomecallCrawling.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(DomecallCrawling)

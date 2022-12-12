@@ -12,8 +12,7 @@ def chromedriver():
         options.add_argument('window-size=1920x1080')
         options.add_argument("disable-gpu")
         chromedriver_autoinstaller.install(True)
-        # driver = webdriver.Chrome(f'./{chrome_ver}/chromedriver', chrome_options=options)
-        driver = webdriver.Chrome(f'./{chrome_ver}/chromedriver')
+        driver = webdriver.Chrome(f'./{chrome_ver}/chromedriver', chrome_options=options)
         return driver
     except:
         options = webdriver.ChromeOptions()
@@ -22,7 +21,6 @@ def chromedriver():
         options.add_argument('window-size=1920x1080')
         options.add_argument("disable-gpu")
         chromedriver_autoinstaller.install(True)
-        # driver = webdriver.Chrome(f'./{chrome_ver}/chromedriver', chrome_options=options)
-        driver = webdriver.Chrome(f'./{chrome_ver}/chromedriver')
+        driver = webdriver.Chrome(f'./{chrome_ver}/chromedriver', chrome_options=options)
         return driver
 

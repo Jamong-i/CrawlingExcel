@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>383</width>
-    <height>527</height>
+    <width>586</width>
+    <height>598</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -28,8 +28,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>361</width>
-      <height>472</height>
+      <width>561</width>
+      <height>524</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="sub_layout">
@@ -161,8 +161,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>383</width>
-     <height>21</height>
+     <width>586</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
