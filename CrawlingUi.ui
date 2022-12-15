@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>586</width>
-    <height>598</height>
+    <width>383</width>
+    <height>436</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -28,44 +28,13 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>561</width>
-      <height>524</height>
+      <width>361</width>
+      <height>361</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="sub_layout">
      <item>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="1" column="0">
-        <widget class="QTextBrowser" name="textBrowser_3"/>
-       </item>
-       <item row="1" column="1">
-        <widget class="QTextBrowser" name="textBrowser_4"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QTextBrowser" name="textBrowser_7"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QTextBrowser" name="textBrowser_5"/>
-       </item>
-       <item row="0" column="1">
-        <widget class="QTextBrowser" name="textBrowser_2"/>
-       </item>
-       <item row="2" column="1">
-        <widget class="QTextBrowser" name="textBrowser_6"/>
-       </item>
-       <item row="0" column="0">
-        <widget class="QTextBrowser" name="textBrowser_1"/>
-       </item>
-       <item row="3" column="1">
-        <widget class="QTextBrowser" name="textBrowser_8"/>
-       </item>
-       <item row="4" column="1">
-        <widget class="QTextBrowser" name="textBrowser_10"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QTextBrowser" name="textBrowser_9"/>
-       </item>
-      </layout>
+      <widget class="QTextBrowser" name="textBrowser_10"/>
      </item>
      <item>
       <layout class="QHBoxLayout" name="select_layout">
@@ -86,6 +55,16 @@
              </property>
             </widget>
            </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_datecode">
+             <property name="echoMode">
+              <enum>QLineEdit::Normal</enum>
+             </property>
+             <property name="placeholderText">
+              <string>A16533</string>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="0">
             <widget class="QLabel" name="pw_label_2">
              <property name="font">
@@ -98,16 +77,6 @@
              </property>
              <property name="textFormat">
               <enum>Qt::AutoText</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="lineEdit_datecode">
-             <property name="echoMode">
-              <enum>QLineEdit::Normal</enum>
-             </property>
-             <property name="placeholderText">
-              <string>A16533</string>
              </property>
             </widget>
            </item>
@@ -161,7 +130,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>586</width>
+     <width>383</width>
      <height>24</height>
     </rect>
    </property>
