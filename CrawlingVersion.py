@@ -13,10 +13,12 @@ import time
 # 2.5 쓰레드 올리지말고 크롬드라이버 생성 for문으로 100개 실행하고 i순서대로 값 받으면 됌
 # 3 소박스 대박스 try except문으로 있으면 실행 없으면 없음 키 벨류에 넣기
 
-def requestCrawling(startNum, EndNum, itemList):
+def requestCrawling(startNum, EndNum, itemList, number):
+    j = 0
     items = {'num': ['productCode', 'price', 'bacode', 'bigBoxCount', 'smallBoxCount', 'origin']}
 
     for i in range(startNum, EndNum):
+        j += 1 
         url = f"https://www.domecall.net/goods/goods_view.php?goodsNo={itemList[i - startNum]}"
         request = requests.get(url)
         soup = BeautifulSoup(request.text, 'html.parser')
@@ -27,7 +29,7 @@ def requestCrawling(startNum, EndNum, itemList):
         bigBoxCount = str(soup.select_one('#frmView > div > div.item > ul > li:nth-child(5) > div > span')).strip("</span>")
         smallBoxCount = str(soup.select_one('#frmView > div > div.item > ul > li:nth-child(6) > div > span')).strip("</span>")
         items[i] = [productCode, price, bacode, bigBoxCount, smallBoxCount, origin]
-        textBrowser.append(f'{i}번 상품번호:{productCode}, 가격:{price}, 바코드번호:{bacode}, 큰박스:{bigBoxCount}, 작은박스:{smallBoxCount}')
+        textBrowser.append(f'쓰레드:{number}, {j}번 상품번호:{productCode}, 가격:{price}, 바코드번호:{bacode}, 큰박스:{bigBoxCount}, 작은박스:{smallBoxCount}')
     # 모두 끝남
     bol = True
 
@@ -78,7 +80,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol1
                 global items1
                 bol1 = False
-                items1, bol1 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items1, bol1 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items1)
             except Exception as error:
@@ -96,7 +98,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol2
                 global items2
                 bol2 = False
-                items2, bol2 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items2, bol2 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items2)
             except Exception as error:
@@ -114,7 +116,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol3
                 global items3
                 bol3 = False
-                items3, bol3 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items3, bol3 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items3)
             except Exception as error:
@@ -132,7 +134,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol4
                 global items4
                 bol4 = False
-                items4, bol4 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items4, bol4 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items4)
             except Exception as error:
@@ -150,7 +152,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol5
                 global items5
                 bol5 = False
-                items5, bol5 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items5, bol5 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items5)
             except Exception as error:
@@ -168,7 +170,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol6
                 global items6
                 bol6 = False
-                items6, bol6 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items6, bol6 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items6)
             except Exception as error:
@@ -186,7 +188,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol7
                 global items7
                 bol7 = False
-                items7, bol7 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items7, bol7 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items7)
             except Exception as error:
@@ -204,7 +206,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol8
                 global items8
                 bol8 = False
-                items8, bol8 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items8, bol8 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items8)
             except Exception as error:
@@ -222,7 +224,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol9
                 global items9
                 bol9 = False
-                items9, bol9 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items9, bol9 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items9)
             except Exception as error:
@@ -240,7 +242,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol10
                 global items10
                 bol10 = False
-                items10, bol10 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items10, bol10 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items10)
             except Exception as error:
@@ -258,7 +260,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol11
                 global items11
                 bol11 = False
-                items11, bol11 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items11, bol11 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items11)
             except Exception as error:
@@ -276,7 +278,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol12
                 global items12
                 bol12 = False
-                items12, bol12 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items12, bol12 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items12)
             except Exception as error:
@@ -294,7 +296,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol13
                 global items13
                 bol13 = False
-                items13, bol13 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items13, bol13 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items13)
             except Exception as error:
@@ -312,7 +314,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol14
                 global items14
                 bol14 = False
-                items14, bol14 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items14, bol14 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items14)
             except Exception as error:
@@ -330,7 +332,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol15
                 global items15
                 bol15 = False
-                items15, bol15 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items15, bol15 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items15)
             except Exception as error:
@@ -348,7 +350,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol16
                 global items16
                 bol16 = False
-                items16, bol16 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items16, bol16 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items16)
             except Exception as error:
@@ -366,7 +368,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol17
                 global items17
                 bol17 = False
-                items17, bol17 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items17, bol17 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items17)
             except Exception as error:
@@ -384,7 +386,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol18
                 global items18
                 bol18 = False
-                items18, bol18 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items18, bol18 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items18)
             except Exception as error:
@@ -402,7 +404,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol19
                 global items19
                 bol19 = False
-                items19, bol19 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items19, bol19 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items19)
             except Exception as error:
@@ -421,7 +423,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 global bol20
                 global items20
                 bol20 = False
-                items20, bol20 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number])
+                items20, bol20 = requestCrawling(startNum[number], endNum[number], itemCodeTread[number], number)
                 print(f"Tread{number + 1}")
                 print(items20)
             except Exception as error:
@@ -462,7 +464,7 @@ class Example(QMainWindow, Ui_DomecallCrawling):
                 load_ws[f"E{j}"] = value[2]
                 load_ws[f"F{j}"] = value[3]
                 load_ws[f"G{j}"] = value[4]
-                load_ws[f"F{j}"] = value[5]
+                load_ws[f"H{j}"] = value[5]
                 j += 1
 
             load_wb.save(filename="CrawlingData.xlsx")
